@@ -5,31 +5,33 @@ import hero from "../../assets/membership/hero.jpg";
 
 function Membership() {
   const formRef = useRef(null);
-const plansRef = useRef(null);
-useEffect(() => {
-  if (window.location.hash === "#membership-form") {
-    setTimeout(() => {
-      formRef.current?.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }, 200);
-  }
-}, []);
+  const plansRef = useRef(null);
 
-const scrollToForm = () => {
-  formRef.current?.scrollIntoView({
-    behavior: "smooth",
-    block: "start",
-  });
-};
+  useEffect(() => {
+    if (window.location.hash === "#membership-form") {
+      setTimeout(() => {
+        formRef.current?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }, 200);
+    }
+  }, []);
 
-const scrollToPlans = () => {
-  plansRef.current?.scrollIntoView({
-    behavior: "smooth",
-    block: "start",
-  });
-};
+  const scrollToForm = () => {
+    formRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
+  const scrollToPlans = () => {
+    plansRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   return (
     <>
       <Navbar />
@@ -48,41 +50,41 @@ const scrollToPlans = () => {
 
           <div className="absolute inset-0 bg-black/60"></div>
 
-          <div className="relative z-10 max-w-7xl mx-auto min-h-screen px-6 lg:px-8 flex items-center pt-24 pb-16">
+          <div className="relative z-10 max-w-7xl mx-auto min-h-screen flex items-center px-6 lg:px-8 pt-24">
 
-            <div className="max-w-xl mt-10">
+            <div className="max-w-xl">
 
               <p className="uppercase tracking-[4px] text-[#B76E3C] font-semibold">
                 MEMBERSHIP
               </p>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mt-4">
+              <h1 className="text-4xl md:text-6xl font-bold leading-tight mt-4">
                 Choose the Plan
                 <br />
                 That Fits You
               </h1>
 
-              <p className="text-gray-300 text-base sm:text-lg leading-8 mt-6">
+              <p className="text-gray-300 text-lg leading-8 mt-6">
                 Flexible membership plans designed for every fitness level.
                 Whether you're just starting your journey or training like a
                 professional athlete, we have the perfect membership for you.
               </p>
 
-              <div className="flex flex-wrap items-center gap-4 mt-10">
+              <div className="flex flex-wrap gap-4 mt-10">
 
                 <button
-  onClick={scrollToForm}
-  className="bg-[#B76E3C] hover:bg-[#9B5F34] px-8 py-4 rounded-full font-semibold transition"
->
-  Join Now
-</button>
+                  onClick={scrollToForm}
+                  className="bg-[#B76E3C] hover:bg-[#9B5F34] px-8 py-4 rounded-full font-semibold transition"
+                >
+                  Join Now
+                </button>
 
                 <button
-  onClick={scrollToPlans}
-  className="text-[#B76E3C] uppercase tracking-[3px] font-semibold hover:text-white transition"
->
-  Compare Plans →
-</button>
+                  onClick={scrollToPlans}
+                  className="text-[#B76E3C] uppercase tracking-[3px] font-semibold hover:text-white transition"
+                >
+                  Compare Plans →
+                </button>
 
               </div>
 
@@ -95,9 +97,9 @@ const scrollToPlans = () => {
         {/* ================= MEMBERSHIP PLANS ================= */}
 
         <section
-  ref={plansRef}
-  className="py-24"
->
+          ref={plansRef}
+          className="py-24"
+        >
 
           <div className="max-w-7xl mx-auto px-6">
 
@@ -141,11 +143,11 @@ const scrollToPlans = () => {
                 </ul>
 
                 <button
-  onClick={scrollToForm}
-  className="mt-10 w-full border border-[#B76E3C] text-[#B76E3C] py-3 rounded-full hover:bg-[#B76E3C] hover:text-white transition"
->
-  Join Now
-</button>
+                  onClick={scrollToForm}
+                  className="mt-10 w-full border border-[#B76E3C] text-[#B76E3C] py-3 rounded-full hover:bg-[#B76E3C] hover:text-white transition"
+                >
+                  Join Now
+                </button>
 
               </div>
 
@@ -196,9 +198,9 @@ const scrollToPlans = () => {
                 </ul>
 
                 <button
-  onClick={scrollToForm}
-  className="mt-10 w-full bg-[#B76E3C] hover:bg-[#9B5F34] py-3 rounded-full font-semibold transition"
->
+                  onClick={scrollToForm}
+                  className="mt-10 w-full bg-[#B76E3C] hover:bg-[#9B5F34] py-3 rounded-full font-semibold transition"
+                >
                   Join Now
                 </button>
 
@@ -252,11 +254,11 @@ const scrollToPlans = () => {
                 </ul>
 
                 <button
-  onClick={scrollToForm}
-  className="mt-10 w-full border border-[#B76E3C] text-[#B76E3C] py-3 rounded-full hover:bg-[#B76E3C] hover:text-white transition"
->
-  Join Now
-</button>
+                  onClick={scrollToForm}
+                  className="mt-10 w-full border border-[#B76E3C] text-[#B76E3C] py-3 rounded-full hover:bg-[#B76E3C] hover:text-white transition"
+                >
+                  Join Now
+                </button>
 
               </div>
 
@@ -265,19 +267,19 @@ const scrollToPlans = () => {
           </div>
 
         </section>
-                {/* ================= MEMBERSHIP FORM ================= */}
+
+        {/* ================= MEMBERSHIP FORM ================= */}
 
         <section
-  ref={formRef}
-  id="membership-form"
-  className="pb-24 bg-[#0B0B0B]"
->
+          ref={formRef}
+          id="membership-form"
+          className="pb-24 bg-[#0B0B0B]"
+        >
 
           <div className="max-w-6xl mx-auto px-6">
 
             <div className="bg-[#121212] border border-[#B76E3C] rounded-2xl p-10">
-
-              <p className="uppercase tracking-[3px] text-[#B76E3C] text-sm font-semibold">
+                            <p className="uppercase tracking-[3px] text-[#B76E3C] text-sm font-semibold">
                 JOIN FITNESS FORCE
               </p>
 
@@ -357,45 +359,33 @@ const scrollToPlans = () => {
                 <div className="flex flex-wrap gap-8">
 
                   <label className="flex items-center gap-2 cursor-pointer">
-
                     <input
                       type="radio"
                       name="gender"
                       className="peer hidden"
                     />
-
                     <div className="w-4 h-4 rounded-full border-2 border-[#B76E3C] peer-checked:bg-[#B76E3C] transition"></div>
-
                     <span>Male</span>
-
                   </label>
 
                   <label className="flex items-center gap-2 cursor-pointer">
-
-                     <input
-                      type="radio"
-                      name="gender"
-                      className="peer hidden"
-                    />
-
-                    <div className="w-4 h-4 rounded-full border-2 border-[#B76E3C] peer-checked:bg-[#B76E3C] transition"></div>
-
-                    <span>Female</span>
-
-                  </label>
-
-                  <label className="flex items-center gap-2 cursor-pointer">
-
                     <input
                       type="radio"
                       name="gender"
                       className="peer hidden"
                     />
-
                     <div className="w-4 h-4 rounded-full border-2 border-[#B76E3C] peer-checked:bg-[#B76E3C] transition"></div>
+                    <span>Female</span>
+                  </label>
 
+                  <label className="flex items-center gap-2 cursor-pointer">
+                    <input
+                      type="radio"
+                      name="gender"
+                      className="peer hidden"
+                    />
+                    <div className="w-4 h-4 rounded-full border-2 border-[#B76E3C] peer-checked:bg-[#B76E3C] transition"></div>
                     <span>Other</span>
-
                   </label>
 
                 </div>
@@ -423,11 +413,9 @@ const scrollToPlans = () => {
                     <option value="" disabled>
                       Select Level
                     </option>
-
                     <option>Beginner</option>
                     <option>Intermediate</option>
                     <option>Advanced</option>
-
                   </select>
 
                 </div>
@@ -445,14 +433,12 @@ const scrollToPlans = () => {
                     <option value="" disabled>
                       Select Goal
                     </option>
-
                     <option>Weight Loss</option>
                     <option>Muscle Gain</option>
                     <option>Strength Training</option>
                     <option>Body Toning</option>
                     <option>General Fitness</option>
                     <option>Endurance</option>
-
                   </select>
 
                 </div>
@@ -488,49 +474,37 @@ const scrollToPlans = () => {
 
               <div className="flex flex-wrap gap-8 text-gray-300">
 
-  <label className="flex items-center gap-3 cursor-pointer">
-  <input
-    type="radio"
-    name="plan"
-    className="peer hidden"
-  />
+                <label className="flex items-center gap-3 cursor-pointer">
+                  <input
+                    type="radio"
+                    name="plan"
+                    className="peer hidden"
+                  />
+                  <div className="w-4 h-4 rounded-full border-2 border-[#B76E3C] peer-checked:bg-[#B76E3C] transition"></div>
+                  <span>Basic ($29/month)</span>
+                </label>
 
-  <div className="w-4 h-4 rounded-full border-2 border-[#B76E3C] peer-checked:bg-[#B76E3C] transition"></div>
+                <label className="flex items-center gap-3 cursor-pointer">
+                  <input
+                    type="radio"
+                    name="plan"
+                    className="peer hidden"
+                  />
+                  <div className="w-4 h-4 rounded-full border-2 border-[#B76E3C] peer-checked:bg-[#B76E3C] transition"></div>
+                  <span>Premium ($49/month)</span>
+                </label>
 
-  <span className="text-gray-300">
-    Basic ($29/month)
-  </span>
-</label>
+                <label className="flex items-center gap-3 cursor-pointer">
+                  <input
+                    type="radio"
+                    name="plan"
+                    className="peer hidden"
+                  />
+                  <div className="w-4 h-4 rounded-full border-2 border-[#B76E3C] peer-checked:bg-[#B76E3C] transition"></div>
+                  <span>Elite ($79/month)</span>
+                </label>
 
-<label className="flex items-center gap-3 cursor-pointer">
-  <input
-    type="radio"
-    name="plan"
-    className="peer hidden"
-  />
-
-  <div className="w-4 h-4 rounded-full border-2 border-[#B76E3C] peer-checked:bg-[#B76E3C] transition"></div>
-
-  <span className="text-gray-300">
-    Premium ($49/month)
-  </span>
-</label>
-
-<label className="flex items-center gap-3 cursor-pointer">
-  <input
-    type="radio"
-    name="plan"
-    className="peer hidden"
-  />
-
-  <div className="w-4 h-4 rounded-full border-2 border-[#B76E3C] peer-checked:bg-[#B76E3C] transition"></div>
-
-  <span className="text-gray-300">
-    Elite ($79/month)
-  </span>
-</label>
-
-</div>
+              </div>
 
               {/* HEALTH INFORMATION */}
 
@@ -541,7 +515,6 @@ const scrollToPlans = () => {
               <div className="grid md:grid-cols-2 gap-6">
 
                 <div>
-
                   <label className="block text-gray-400 mb-2">
                     Medical Conditions
                   </label>
@@ -551,11 +524,9 @@ const scrollToPlans = () => {
                     placeholder="If any"
                     className="w-full bg-transparent border border-[#2b2b2b] rounded-lg px-4 py-3 text-white placeholder-gray-600 outline-none focus:border-[#B76E3C]"
                   />
-
                 </div>
 
                 <div>
-
                   <label className="block text-gray-400 mb-2">
                     Emergency Contact Name
                   </label>
@@ -565,11 +536,9 @@ const scrollToPlans = () => {
                     placeholder="Enter contact name"
                     className="w-full bg-transparent border border-[#2b2b2b] rounded-lg px-4 py-3 text-white placeholder-gray-600 outline-none focus:border-[#B76E3C]"
                   />
-
                 </div>
 
                 <div className="md:col-span-2">
-
                   <label className="block text-gray-400 mb-2">
                     Emergency Contact Number
                   </label>
@@ -579,7 +548,6 @@ const scrollToPlans = () => {
                     placeholder="+977 Enter phone number"
                     className="w-full bg-transparent border border-[#2b2b2b] rounded-lg px-4 py-3 text-white placeholder-gray-600 outline-none focus:border-[#B76E3C]"
                   />
-
                 </div>
 
               </div>
@@ -593,7 +561,6 @@ const scrollToPlans = () => {
               <div className="grid md:grid-cols-2 gap-6">
 
                 <div>
-
                   <label className="block text-gray-400 mb-2">
                     Username
                   </label>
@@ -603,11 +570,9 @@ const scrollToPlans = () => {
                     placeholder="Create username"
                     className="w-full bg-transparent border border-[#2b2b2b] rounded-lg px-4 py-3 text-white placeholder-gray-600 outline-none focus:border-[#B76E3C]"
                   />
-
                 </div>
 
                 <div>
-
                   <label className="block text-gray-400 mb-2">
                     Password
                   </label>
@@ -617,11 +582,9 @@ const scrollToPlans = () => {
                     placeholder="Create password"
                     className="w-full bg-transparent border border-[#2b2b2b] rounded-lg px-4 py-3 text-white placeholder-gray-600 outline-none focus:border-[#B76E3C]"
                   />
-
                 </div>
 
                 <div className="md:col-span-2">
-
                   <label className="block text-gray-400 mb-2">
                     Confirm Password
                   </label>
@@ -631,22 +594,18 @@ const scrollToPlans = () => {
                     placeholder="Confirm password"
                     className="w-full bg-transparent border border-[#2b2b2b] rounded-lg px-4 py-3 text-white placeholder-gray-600 outline-none focus:border-[#B76E3C]"
                   />
-
                 </div>
 
               </div>
-               
-
 
               {/* TERMS & CONDITIONS */}
 
               <div className="mt-8 space-y-5">
 
                 <label className="flex items-center gap-3 text-gray-400 cursor-pointer">
-
                   <input
                     type="checkbox"
-                    className="w-4 h-4 rounded-full border-2 border-[#B76E3C] appearance-none cursor-pointer checked:bg-[#B76E3C] checked:border-[#B76E3C]"
+                    className="w-4 h-4 rounded border-2 border-[#B76E3C] appearance-none checked:bg-[#B76E3C] checked:border-[#B76E3C]"
                   />
 
                   <span>
@@ -659,25 +618,20 @@ const scrollToPlans = () => {
                       Privacy Policy
                     </span>.
                   </span>
-
                 </label>
 
                 <label className="flex items-center gap-3 text-gray-400 cursor-pointer">
-
                   <input
                     type="checkbox"
-                    className="w-4 h-4 rounded-full border-2 border-[#B76E3C] appearance-none cursor-pointer checked:bg-[#B76E3C] checked:border-[#B76E3C]"
+                    className="w-4 h-4 rounded border-2 border-[#B76E3C] appearance-none checked:bg-[#B76E3C] checked:border-[#B76E3C]"
                   />
 
                   <span>
                     I agree to receive promotional emails and fitness updates.
                   </span>
-
                 </label>
 
               </div>
-
-              {/* BUTTON */}
 
               <button className="w-full mt-10 bg-[#B76E3C] hover:bg-[#9B5F34] py-4 rounded-lg text-lg font-semibold transition">
                 Create Membership
