@@ -38,7 +38,7 @@ const scrollToPlans = () => {
 
         {/* ================= HERO ================= */}
 
-        <section className="relative h-[600px] overflow-hidden">
+        <section className="relative min-h-screen overflow-hidden">
 
           <img
             src={hero}
@@ -48,27 +48,27 @@ const scrollToPlans = () => {
 
           <div className="absolute inset-0 bg-black/60"></div>
 
-          <div className="relative z-10 max-w-7xl mx-auto h-full px-6 lg:px-8 flex items-center">
+          <div className="relative z-10 max-w-7xl mx-auto min-h-screen px-6 lg:px-8 flex items-center pt-24 pb-16">
 
-            <div className="max-w-xl">
+            <div className="max-w-xl mt-10">
 
               <p className="uppercase tracking-[4px] text-[#B76E3C] font-semibold">
                 MEMBERSHIP
               </p>
 
-              <h1 className="text-6xl font-bold leading-tight mt-4">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mt-4">
                 Choose the Plan
                 <br />
                 That Fits You
               </h1>
 
-              <p className="text-gray-300 text-lg leading-8 mt-6">
+              <p className="text-gray-300 text-base sm:text-lg leading-8 mt-6">
                 Flexible membership plans designed for every fitness level.
                 Whether you're just starting your journey or training like a
                 professional athlete, we have the perfect membership for you.
               </p>
 
-              <div className="flex items-center gap-8 mt-10">
+              <div className="flex flex-wrap items-center gap-4 mt-10">
 
                 <button
   onClick={scrollToForm}
